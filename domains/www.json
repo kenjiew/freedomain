@@ -1,0 +1,10 @@
+{
+  "owner": {
+    "username": "kenjiew"
+  },
+  "description": "www",
+  "record": {
+    "CNAME": "fioo.org"
+  },
+  "proxied": true
+}
