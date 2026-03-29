@@ -157,4 +157,4 @@ internal.forEach(function(subdomain) {
 
 // commits.push();
 
-D(rootDomain, regNone, providerCf, commits);
+D(rootDomain, regNone, providerCf, commits, records, ignored);
