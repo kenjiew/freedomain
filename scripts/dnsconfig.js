@@ -116,6 +116,11 @@ var ignored = [
     IGNORE("ns[1-4]", "A,AAAA")
 ];
 
+var internal = require("./util/internal.json");
+
+internal.forEach(function(subdomain) {
+    ignored.push(IGNORE(subdomain, "*"));
+});
 
   // if ('CAA' in domainData.record) {
   //   for (var caa in domainData.record.CAA) {
