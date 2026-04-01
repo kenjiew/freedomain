@@ -33,7 +33,7 @@ function getDomainsList(filesPath) {
   return result;
 }
 
-var domains = getDomainsList('domains');
+var domains = getDomainsList('./domains');
 var recordsByDomain = {};
 
 // Helper to add records to a domain entry
