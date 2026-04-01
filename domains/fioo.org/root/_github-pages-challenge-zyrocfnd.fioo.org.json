@@ -2,7 +2,8 @@
   "domain": "fioo.org",
   "subdomain": "github",
   "owner": {
-    "username": "zyrocfnd"
+    "username": "zyrocfnd",
+    "email": "admin@fioo.org"
   },
   "record": {
     "TXT": "4449cca319e97c300aec44f2899c58"
