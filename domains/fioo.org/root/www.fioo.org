@@ -2,7 +2,8 @@
   "domain": "fioo.org",
   "subdomain": "www",
   "owner": {
-    "username": "zyrocfnd"
+    "username": "zyrocfnd",
+    "email": "admin@fioo.org"
   },
   "record": {
     "CNAME": "fioo.org"
