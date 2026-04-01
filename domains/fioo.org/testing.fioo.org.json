@@ -8,5 +8,5 @@
   "record": {
     "CNAME": "jmb.my.id"
   },
-  "proxy": true
+  "proxy": false
 }
