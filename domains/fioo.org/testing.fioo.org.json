@@ -1,6 +1,9 @@
 {
+  "domain": "fioo.org",
+  "subdomain": "testing",
   "owner": {
-    "username": "zyrocfnd"
+    "username": "zyrocfnd",
+    "email": "me@me.tld"
   },
   "record": {
     "CNAME": "jmb.my.id"
