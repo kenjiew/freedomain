@@ -118,7 +118,38 @@ domains.forEach(function(domainEntry) {
   }
 });
 
+//util
+var reserved = require("./util/reserved.json");
+var internal = require("./util/internal.json");
+
+//ignore
+var ignored = [
+    IGNORE("\\*", "A"),
+    IGNORE("*._domainkey", "TXT"),
+    IGNORE("@", "*"),
+    IGNORE("_acme-challenge", "TXT"),
+    IGNORE("_discord", "TXT"),
+    IGNORE("_dmarc", "TXT"),
+    IGNORE("_gh-zyrocfnd-o", "TXT"),
+    IGNORE("_gh-zyrocfnd-o.**", "TXT"),
+    IGNORE("_github-pages-challenge-zyrocfnd", "TXT"),
+    IGNORE("_github-pages-challenge-zyrocfnd.**", "TXT"),
+    IGNORE("ns[1-4]", "A,AAAA")
+];
+
+internal.forEach(function(sub) {
+    ignored.push(IGNORE(sub, "*"));
+});
+
 // Commit all DNS records for each domain
 Object.keys(recordsByDomain).forEach(function(domainName) {
-  D(domainName, regNone, providerCf, recordsByDomain[domainName]);
+    
+    // IP FOR UTIL
+    for (var i = 0; i < reserved.length; i++) {
+        recordsByDomain[domainName].push(A(reserved[i], IP("192.0.2.1"), proxy.on));
+    }
+
+// Commit all DNS records for each domain
+Object.keys(recordsByDomain).forEach(function(domainName) {
+  D(domainName, regNone, providerCf, recordsByDomain[domainName], ignored);
 });
