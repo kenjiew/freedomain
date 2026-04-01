@@ -1,12 +1,15 @@
 {
-  "domain": "fioo.org",
-  "subdomain": "github",
-  "owner": {
-    "username": "zyrocfnd",
-    "email": "admin@fioo.org"
-  },
-  "record": {
-    "TXT": "4449cca319e97c300aec44f2899c58"
-  },
-  "proxy": false
+    "description": "gh verification for root domain",
+    "domain": "fioo.org",
+    "subdomain": "_github-pages-challenge-zyrocfnd",
+    "owner": {
+        "repo": "https://github.com/zyrocfnd/fioo.org",
+        "email": "admin@fioo.org"
+    },
+    "record": {
+        "TXT": [
+            "4449cca319e97c300aec44f2899c58"
+        ]
+    },
+    "proxied": false
 }
