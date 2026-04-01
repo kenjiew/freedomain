@@ -10,7 +10,7 @@ var proxy = {
 // Load all domain configurations from JSON files
 function getDomainsList(filesPath) {
   var result = [];
-  var files = glob.apply(null, [filesPath + '/**', true, '.json']);
+  var files = glob.apply(null, [filesPath, true, '.json']);
 
   files.forEach(function(file) {
     try {
@@ -33,7 +33,7 @@ function getDomainsList(filesPath) {
   return result;
 }
 
-var domains = getDomainsList('./domains');
+var domains = getDomainsList('domains');
 var recordsByDomain = {};
 
 // Helper to add records to a domain entry
