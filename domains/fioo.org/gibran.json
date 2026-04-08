@@ -1,0 +1,16 @@
+{
+    "description": "gabut, coba2",
+    "domain": "fioo.org",
+    "subdomain": "gibran",
+    "owner": {
+        "username": "geberann",
+        "repo": "",
+        "email": "gibran@ngid.my.id"
+    },
+    "record": {
+        "A": [
+            "45.64.97.109"
+        ]
+    },
+    "proxied": true
+}
